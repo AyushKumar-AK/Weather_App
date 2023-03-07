@@ -14,7 +14,8 @@ let weather = {
         }
         return response.json();
       })
-      .then((data) => this.displayWeather(data));
+      .then((data) => this.displayWeather(data))
+      .catch((error) => console.log(error));
   },
   displayWeather: function (data) {
     const { name } = data;
@@ -51,4 +52,4 @@ document
     }
   });
 
-weather.fetchWeather("Denver");
+weather.fetchWeather("Bhubaneswar");
